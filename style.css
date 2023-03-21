@@ -55,4 +55,11 @@ body{
     border: 2px solid gray;
     border-radius: 15px;
     cursor: pointer;
+    transition: 0.2s;
+}
+.letter:hover{
+    background-color: #161616;
+    border-color: lightgray;
+    box-shadow: 0px 0px 4px white;
+    transition: 0.4s;
 }
