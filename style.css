@@ -63,3 +63,21 @@ body{
     box-shadow: 0px 0px 4px white;
     transition: 0.4s;
 }
+#again{
+    color: rgb(33, 180, 20);
+    text-decoration: none;
+    cursor: pointer;
+}
+#again:hover{
+    text-shadow: 0px 0px 20px rgb(77, 250, 198);
+    color: rgba(0, 255, 0, 0.575);
+}
+#retry{
+    color: rgb(228, 46, 0);
+    text-decoration: none;
+    cursor: pointer;
+}
+#retry:hover{
+    text-shadow: 0px 0px 20px rgb(253, 16, 8);
+    color: rgba(255, 51, 0, 0.575);
+}
