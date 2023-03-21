@@ -2,7 +2,7 @@ body{
     background-color: black;
     color: lightgray;
     font-size: 24px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: "DM mono";
 }
 #container{
     width: 100%;
