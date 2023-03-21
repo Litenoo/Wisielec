@@ -2,6 +2,7 @@ body{
     background-color: black;
     color: lightgray;
     font-size: 24px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 #container{
     width: 100%;
@@ -28,20 +29,30 @@ body{
     flex: 4;
     min-height: 280px;
 }
+#gallows img{
+    width: 100%;
+}
 #alphabet{
-    flex: 6;
+    flex: 5;
     display: flex;
+}
+#letters{
+    width: 80%;
+    display: flex;
+    justify-content: flex-start;
     flex-direction: row;
-    flex-wrap: wrap;
     align-content: flex-start;
+    flex-wrap: wrap;
+    margin-top: 60px;
 }
 .letter{
-    width: 30px;
-    height: 30px;
+    width: 35px;
+    height: 35px;
     text-align: center;
+    font-size: 24px;
     padding: 5px;
     margin: 5px;
     border: 2px solid gray;
-    border-radius: 6px;
+    border-radius: 15px;
     cursor: pointer;
 }
