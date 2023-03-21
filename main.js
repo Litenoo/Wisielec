@@ -1,4 +1,6 @@
-let password = "Samuel Pepsi i jego koledzy";
+let possiblePasswords = ["Miodowe lata", "Ranczo", "Kevin sam w domu","Breaking Bad","Jaś Fasola","Przyjaciele","Park Jurajski","Nie ma to jak w rodzinie","Jak wytresowac smoka","Chłopaki z baraków","Człowiek kontra pszczoła"];
+let password = possiblePasswords[Math.floor(Math.random() * 11)];
+console.log(password);
 password = password.toUpperCase();
 let letterMarks = ["A","Ą","B","C","Ć","D","E","Ę","F","G","H","I","J","K","L","Ł","M","N","Ń","O","Ó","P","Q","R","S","Ś","T","U","V","W","X","Y","Z","Ż","Ź"];
 let lengthOfPassword = password.length;
@@ -29,7 +31,7 @@ function generateAlphabet(){
 
 String.prototype.setMark = function(place, mark){
 	if (place > this.length - 1) return this.toString();
-	else return this.substr(0, place) + mark + this.substr(place+1);
+	else return this.substring(0, place) + mark + this.substring(place+1);
 };
 
 function checkLetter(id) {
@@ -69,7 +71,7 @@ function checkLetter(id) {
         document.querySelector("#alphabet").style.textAlign = "center";
     }
     if(numberOfWrongs >= 9){
-        document.querySelector("#alphabet").innerHTML = '<h2>Przegrałeś</h2> <br> Niestety nie udało ci się odgadnąć hasła. <br><br> <span id="retry" onclick="location.reload()"> Kliknij, aby spróbowąć jeszcze raz. </span>';
+        document.querySelector("#alphabet").innerHTML = '<h2>Przegrałeś</h2> <br> Hasło brzmi:'+ password +' <br><br> <span id="retry" onclick="location.reload()"> Kliknij, aby spróbować jeszcze raz. </span>';
         document.querySelector("#alphabet").style.display = "block";
         document.querySelector("#alphabet").style.textAlign = "center";
     }
