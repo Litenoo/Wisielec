@@ -1,4 +1,4 @@
-let possiblePasswords = ["Miodowe lata", "Ranczo", "Kevin sam w domu","Breaking Bad","Jaś Fasola","Przyjaciele","Park Jurajski","Nie ma to jak w rodzinie","Jak wytresowac smoka","Chłopaki z baraków","Człowiek kontra pszczoła"];
+let possiblePasswords = ["Miodowe lata", "Ranczo", "Kevin sam w domu","Sponge Bob","Jaś Fasola","Przyjaciele","Park Jurajski","Kot w butach","Jak wytresowac smoka","Chłopaki z baraków","The Office"];
 let password = possiblePasswords[Math.floor(Math.random() * 11)];
 console.log(password);
 password = password.toUpperCase();
@@ -34,6 +34,14 @@ String.prototype.setMark = function(place, mark){
 	else return this.substring(0, place) + mark + this.substring(place+1);
 };
 
+images = [];
+
+for (n = 0; n < 10; n++) {
+    image = new Image();
+    image.src = 'images/s' + n + '.jpg';
+    images[n] = image;
+}
+
 function checkLetter(id) {
     let element = "ltr" + id;
     let guessed = false;
@@ -63,7 +71,8 @@ function checkLetter(id) {
         document.getElementById(element).setAttribute("onclick",";");
 
         numberOfWrongs++;
-        document.querySelector("#gallows").innerHTML = '<img src="images/s' + numberOfWrongs + '.jpg">';
+        document.querySelector("#gallows").innerHTML = "";
+        document.querySelector("#gallows").appendChild(images[numberOfWrongs]);
     }
     if(password == hidenPassword){
         document.querySelector("#alphabet").innerHTML = '<h2>Wygrałeś</h2> <br> Gratulacje, odgadnąłeś hasło ! <br><br> <span id="again" onclick="location.reload()"> Kliknij, aby zagrać jeszcze raz ! </span>';
